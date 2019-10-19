@@ -27,3 +27,8 @@ let	oneRandomWord = randomWords[Math.floor(Math.random() * randomWords.length)];
 // let wresult = "У тебя" + " " + oneBodyPart + " " + "еще более" + " " + oneBodyFooy + " " + "чем" + " " + oneAnimalParts + " " + oneRandomWord + "!!!";
 let wresult = ["У тебя", oneBodyPart, "еще более", oneBodyFooy, "чем", oneAnimalParts, "у", oneRandomWord + "!!!"].join(" ");
 console.log(wresult);
+
+
+// Применение.join('');
+let sameArrey = [3,2,1].join(" больше, чем ");
+console.log(sameArrey);
