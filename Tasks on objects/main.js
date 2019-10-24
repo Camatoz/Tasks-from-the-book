@@ -31,8 +31,8 @@ console.log(d1[7]);
 
 // Task-5
 // let d2 = [45, 78, 10, 3];
-// let sum2 = 0;
+// let sum2 = [];
 // for (i = 0; i <= d2.length; i++) {
-//   sum2[i] = sum2[i] + sum2[i];
+//   sum2[i] = [] +;
 //   console.log(sum2);
 // }
