@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Chapter - 9</title>
   </head>
   <body>
     <h1 id="heading">Проявляющийся массив.</h1>
+    <h2>Slow String</h2>
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
     <script>
+      // Task-1 (Плавно появляющиеся элементы)
       let friends = ["Ryslan", "Sergey", "Aleksandr", "Yura"];
       $("#heading").text("My friends");
 
@@ -21,6 +21,16 @@
           .fadeIn((i + 1) * 10000);
       }
       $("p").append(" the Best!");
+      // Task-2 (Исчезновение и появление за 1,2,3 сек.)
+      let delay = 1000;
+      for (let i = 0; i < 5; i++) {
+        $("h1")
+          .fadeOut(delay)
+          .fadeIn(delay);
+        delay += 1000;
+      }
+      // Task-3 (Задержка анимации)
+      $("h2").fadeTo(5000, 0.3);
     </script>
   </body>
 </html>
