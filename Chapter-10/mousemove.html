@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mouse Move</title>
+  </head>
+  <body>
+    <h1 id="heading">Хрен убежишь...</h1>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <script>
+        /* Task-1 (Изменитьл пример с обработчиком,чтобы заголовок следовал 
+        не за указателем мышки,а только за кликами)*/
+      $("html").click(function(event) {
+        $("#heading").offset({
+          left: event.pageX,
+          top: event.pageY
+        });
+        console.log("Click! " + event.pageX + " " + event.pageY);
+      });
+    </script>
+  </body>
+</html>
