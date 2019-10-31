@@ -30,6 +30,13 @@
         delay += 1000;
       }
       // Task-3 (Задержка анимации)
+      $("body").append("<strong>One more line.</strong>");
+      $("strong")
+        .fadeOut(1000)
+        .delay(5000)
+        .fadeIn(3000);
+
+      // Task-4 (Метод fadeTo())
       $("h2").fadeTo(5000, 0.3);
     </script>
   </body>
