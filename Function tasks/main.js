@@ -111,4 +111,4 @@ function product(n) {
   }
 }
 
-log(product(5));
+log(product(12));
