@@ -80,3 +80,35 @@ function operation(m, n, o) {
 }
 
 log(operation(9, 3, "-"));
+
+// Task-9
+// function addN(n) {
+//   return sumAddN;
+// }
+
+// function sumAddN(a) {
+//   return a + addN;
+// }
+
+// log(addN(2));
+
+// Task-10 (Напишите функцию words(),  которая в зависимости от переданного в нее целочисленного аргумента n, будет выводить слово «товар» в нужно форме («12 товаров», но «22 товара»).)
+function product(n) {
+  if (n === 0) {
+    return n + " товаров";
+  } else if (n >= 5 && n <= 20) {
+    return n + " товаров";
+  } else if (n === 1) {
+    return 1 + " товар";
+  } else if (n >= 2 && n <= 4) {
+    return n + " товара";
+  } else if (n === 21) {
+    return n + " товар";
+  } else if (n >= 22 && n <= 24) {
+    return n + " товара";
+  } else if (n >= 25 && n <= 30) {
+    return n + " товаров";
+  }
+}
+
+log(product(5));
