@@ -42,7 +42,11 @@
           }
         }
       };
-      setInterval(moveHeading, 30);
+      let intervalId = setInterval(moveHeading, 30);
+
+      $("#heading").click(function() {
+        clearInterval(intervalId);
+      });
     </script>
   </body>
 </html>
