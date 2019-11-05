@@ -6,6 +6,7 @@ hello1();
 
 // Task-2 (Напишите функцию hello2(), которая при вызове будет принимать переменную name (например, «Василий») и выводить строку (в нашем случае «Привет, Василий»).  В случае отсутствующего аргумента выводить «Привет, гость»)
 let name1 = "Nick";
+
 function hello2(a, b) {
   if (name !== "undefined") {
     console.log("Hi, " + name1 + " !");
@@ -21,9 +22,14 @@ console.log(mul(2, 5));
 
 // Task-4 (Создайте функцию repeat(str, n), которая возвращает строку, состоящую и n повторений строки str. n — по умолчанию 2, str — пустая строка)
 function repeat(str, n = 2) {
-  return str * n;
+  let result1 = '';
+  for (let i = 0; i < n; i++) {
+    result1 += str
+  }
+  return result1;
 }
-console.log(repeat("gh", 2));
+let repeatResult = repeat("gh", 3);
+console.log(repeatResult);
 
 // Task-x (вывести наименьшее число)
 function min(a, b) {
