@@ -2,78 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Cetch the treasure!</title>
 </head>
 
 <body>
     <h1 id="heading">Найди клад!</h1>
-    <img id="map" width=400 height=400
+    <img id="map" width="400" height="400"
         src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7acc4aee-c277-47e1-9445-0c3a99dc9e21/daf3dyx-ed5626bb-5183-49c2-b270-1d6d0b93f8c5.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdhY2M0YWVlLWMyNzctNDdlMS05NDQ1LTBjM2E5OWRjOWUyMVwvZGFmM2R5eC1lZDU2MjZiYi01MTgzLTQ5YzItYjI3MC0xZDZkMGI5M2Y4YzUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.D44JbKmxSvavA7g2jiSK7g1VRjKb_Pn6qF6kQM8Rttc"
-        alt="map">
+        alt="map" />
     <p id="distance"></p>
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
-    <script>
-        // Получить случайное число от 0 до size-1
-        let getRandomNumber = function (size) {
-            return Math.floor(Math.random() * size);
-        };
+    <script src="main.js"></script>
 
-        // Вычислить расстояние от клика (event) до клада (target)
-        let getDistance = function (event, target) {
-            let diffX = event.offsetX - target.x;
-            let diffY = event.offsetY - target.y;
-            return Math.sqrt((diffX * diffX) + (diffY * diffY));
-        };
-
-        // Получить для расстояния строку подсказки
-        let getDistanceHint = function (distance) {
-            if (distance < 10) {
-                return "Обожжешься!";
-            } else if (distance < 20) {
-                return "Очень горячо";
-            } else if (distance < 40) {
-                return "Горячо";
-            } else if (distance < 80) {
-                return "Тепло";
-            } else if (distance < 160) {
-                return "Холодно";
-            } else if (distance < 320) {
-                return "Очень холодно";
-            } else {
-                return "Замерзнешь!";
-            }
-        };
-
-        // Создаем переменные
-        let width = 400;
-        let height = 400;
-        let clicks = 0;
-
-        // Случайная позиция клада
-        let target = {
-            x: getRandomNumber(width),
-            y: getRandomNumber(height)
-        };
-
-        // Добавляем элементу img обработчик клика
-        $("#map").click(function (event) {
-            clicks++;
-
-            // Получаем расстояние от места клика до клада
-            let distance = getDistance(event, target);
-            // Преобразуем расстояние в подсказку
-            let distanceHint = getDistanceHint(distance);
-
-            // Записываем в элемент #distance новую подсказку
-            $("#distance").text(distanceHint);
-
-            // Если клик был достаточно близко, поздравляем с победой
-            if (distance < 8) {
-                alert("Клад найден! Сделано кликов: " + clicks);
-            }
-        });
-    </script>
 </body>
 
 </html>
